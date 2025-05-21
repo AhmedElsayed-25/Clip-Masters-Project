@@ -82,26 +82,6 @@ const clientSay = [
  "job":"CTO",
  "description":"Fire work.",
  "image":`<img src="https://i.ibb.co/BKNXPhgp/Untitled-design-28.png" alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-600 bg-gray-100">`
-},
-{"name": "Steven builds",
- "job":"UI Develeoper",
- "description":"Sweet!!",
- "image":`<img src="https://i.ibb.co/mVLJcJ3W/Untitled-design-27.png" alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-600 bg-gray-100">`
-},
-{"name": "Fall",
- "job":"Senior Product Designer",
- "description":"Damnn, so good brother.",
- "image":`<img src="https://i.ibb.co/VcZ4Lyxr/Untitled-design-26.png" alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-600 bg-gray-100">`
-},
-{"name": "Modern vision",
- "job":"CTO",
- "description":"Fire work.",
- "image":`<img src="https://i.ibb.co/BKNXPhgp/Untitled-design-28.png" alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-600 bg-gray-100">`
-},
-{"name": "Steven builds",
- "job":"UI Develeoper",
- "description":"Sweet!!",
- "image":`<img src="https://i.ibb.co/mVLJcJ3W/Untitled-design-27.png" alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-600 bg-gray-100">`
 }
 ];
 
@@ -189,16 +169,18 @@ function showHWork() {
 //define a function to show Reviews section using map loop
 function clientR() {
   const clientList = document.getElementById("clients-reviews");
-  clientList.innerHTML = clientSay.map(clientr => `
-     <div class="mb-6 p-4">
-        <div class="h-full text-center">
-          ${clientr.image}
-          <p class="leading-relaxed text-gray-100">${clientr.description}</p>
-          <span class="inline-block h-1 w-10 rounded bg-gray-500 mt-6 mb-4 animate-pulse"></span>
-          <h2 class="text-gray-100 font-medium title-font tracking-wider text-sm">${clientr.name}</h2>
-          <p class="text-gray-100">${clientr.job}</p>
-        </div>
+  const doubledClients = clientSay.concat(clientSay);
+
+  clientList.innerHTML = doubledClients.map(clientr => `
+     <div class="p-4">
+      <div class="h-full text-center bg-gray-800 rounded-lg p-6">
+        ${clientr.image}
+        <p class="leading-relaxed text-gray-100">${clientr.description}</p>
+        <span class="inline-block h-1 w-10 rounded bg-gray-500 mt-6 mb-4 animate-pulse"></span>
+        <h2 class="text-gray-100 font-medium title-font tracking-wider text-sm">${clientr.name}</h2>
+        <p class="text-gray-100">${clientr.job}</p>
       </div>
+    </div>
     `).join('');
 };
 

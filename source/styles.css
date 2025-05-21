@@ -51,12 +51,17 @@
   }
 }
 
-
-
 @keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* نتحرك لنص العرض لإننا هنكرر العناصر مرتين */
 }
+
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-track > div {
+  flex-shrink: 0; /* مهم علشان العناصر متتضغطش */
+  width: 300px; /* أو أي عرض ثابت يناسب العنصر */
+  margin-right: 1rem;
 }
