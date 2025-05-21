@@ -5,6 +5,12 @@
       <link rel="stylesheet" href="source/styles.css">
    </head>
    <body class="bg-black">
+    <!-- خلفية الفيديو -->
+        <video autoplay muted loop playsinline id="myVideo">
+          <source src="Stars-video.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>   
+    <div class="overlay-content">   
     <!-- Header -->
     <header class="bg-black text-gray-600 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -21,11 +27,7 @@
       </header>
       <!-- Hero Section  -->
        <section class="text-gray-600 body-font relative h-screen w-full overflow-hidden">
-        <!-- خلفية الفيديو -->
-        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-          <source src="Stars-video.mp4" type="video/mp4">
-          متصفحك لا يدعم تشغيل الفيديو.
-        </video>
+        <!--  -->
         <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col" id="Hero">
      <!-- The we offer section will show up here -->
   </div>
@@ -125,6 +127,7 @@
           </span>
         </div>
       </footer>
+      </div> 
      <!-- JavaScript -->
     <script src="source/script.js"></script> 
    </body>
